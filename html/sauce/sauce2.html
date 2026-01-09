@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вторая страница</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/logo.css">
+  <script src="../../JS/main.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div>
+      <a href="../../index.html">
+        <div class="logo">
+          <div class="pan">
+            <div class="panhandle">
+                <div class="hole"></div>
+            </div>
+            <div class="bottom"></div>
+          </div>
+          <div class="egg">
+          <div class="white"></div>
+            <div class="yolk">
+              <div class="glare glare-left"></div>
+              <div class="glare glare-right"></div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <h1 class="site-name">Мастер Вкуса</h1>
+    </div>
+    <img class="img-header" src="../../img/food-background-with-ingredients-pasta.jpg" alt="">
+  </header>
+
+  <nav class="nav">
+    <ol>
+      <li><a href="../../html/soup.html">супы</a></li>
+      <li><a href="../../html/hot.html">горячие блюда</a></li>
+      <li><a href="../../html/salad.html">салаты</a></li>
+      <li><a href="../../html/snack.html">закуски</a></li>
+      <li><a href="../../html/bakery.html">выпечка</a></li>
+      <li><a href="../../html/dessert.html">десерты</a></li>
+      <li><a href="../../html/sauce.html">соусы</a></li>
+      <li><a href="../../html/canned.html">заготовки</a></li>
+    </ol>
+    <img src="../../img/img-nav-dovn.png" alt="">
+  </nav>
+
+  <main>
+    <h2>Название</h2>
+    <div class="content">
+      <div class="dish">
+        <img id="photo" src="#" alt="">
+        <p class="description">Lorem ipsum dolor sit amet.</p>
+        <h4>Ингредиенты:</h4>
+        <ol id="ingredients"></ol>
+        <h4>Процесс приготовления</h4>
+        <ol id="recipe"></ol>
+      </div>
+  </main>
+
+  <script>
+    let num = 2;
+
+    document.querySelector('h2').textContent = arrayOfSauceNames[num - 1]
+    document.querySelector('.dish img').src = '../' + arrayOfSauceImgs[num - 1]
+    document.querySelector('.description').textContent = arrayOfSauceDescriptions[num - 1]
+    const olElement = document.querySelector('#ingredients')
+    for (let ingredient of arrayOfSauceIngredients[num - 1]) {
+      const newLi = document.createElement('li')
+      newLi.textContent = ingredient
+      olElement.appendChild(newLi)
+    }
+    const olRecipe = document.querySelector('#recipe')
+    for (let step of arrayOfSauceRecipe[num - 1]) {
+      const newLi = document.createElement('li')
+      newLi.textContent = step
+      olRecipe.appendChild(newLi)
+    }
+  </script>
+
+  <footer class="footer">Нижняя часть</footer>
+</body>
+</html>

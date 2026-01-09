@@ -1,0 +1,116 @@
+.aquarium div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.aquarium {
+    width: 200px;
+    height: 200px;
+    background: white;
+    position: relative;
+    margin: 0 auto;
+}
+.seaweed {
+    width: 150px;
+    height: 180px;
+    border-radius: 80% 100% ;
+    border-left: 12px solid #64e62b;
+    transform: rotate(26deg);
+}
+.seaweed-left {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+}
+.seaweed-right {
+    position: absolute;
+    top: 30px;
+    left: 45px;
+    transform: scaleX(-1) rotate(26deg);
+}
+.seaweed-center {
+    position: absolute;
+    top: 30px;
+    left: 85px;
+}
+.seabed {
+    background: repeating-linear-gradient(to right, rgb(250, 245, 51), yellow 13px, rgb(233, 199, 40) 14px, rgb(229, 172, 43) 12%);
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+}
+.fish {
+    width: 80px;
+    height: 40px;
+    background: linear-gradient(to right, rgb(231, 186, 52), rgb(242, 245, 221));
+    position: absolute;
+    border-radius: 50%;
+    left: 17%;
+    top: 33%;
+}
+.fish > .tail {
+    background: rgb(231, 186, 52);
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    clip-path: polygon(0.00% 0.00%, 20% 0%, 100.00% 30%,100.00% 70%, 20% 100%, 0% 100%);
+    left: -35px;
+    top: 5px;
+}
+.fish > .tail::before {
+background: white;
+        content: '';
+        width: 20px;
+        height: 30px;
+        border-radius: 0 50% 80% 0;
+        display: inline-block;
+}
+.fish > .eye {
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    position: absolute;
+    background: black;
+    right: 10px;
+    top: 15px;
+}
+.pattern {
+    width: 34px;
+    height: 34px;
+    border-radius: 100% 0 0 100%;
+    border-left: 3px solid red;
+    position: absolute;
+    top: 3px;
+    right: 0;
+}
+.fish > .patterns {
+    width: 40px;
+    height: 14px;
+    position: absolute;
+    left: 10%;
+}
+.pattern1, .pattern2, .pattern3 {
+    width: 40%;
+    height: 15px;
+}
+.pattern1 {
+    top: 0;
+    transform: rotate(20deg);
+}
+.pattern2 {
+    top: 12px;
+    right: 4px;
+}
+.pattern3 {
+    top: 25px;
+    transform: rotate(-20deg);
+}
+.smoll-fish {
+    transform: scaleX(-1) scale(70%);
+    top: 110px;
+    left: 85px;
+}
+.big-fish {
+    transform: rotate(-15deg);
+}

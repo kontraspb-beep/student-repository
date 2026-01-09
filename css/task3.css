@@ -1,0 +1,103 @@
+.container {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  border: 1px solid;
+  margin: 0 auto;
+}
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  
+}
+.tableware-passive-img,
+.tableware-active-img {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.tableware-active-img {
+  position: absolute;
+  opacity: 0;
+}
+.pot-img {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 41%;
+  left: 17%;
+  opacity: 0;
+  transform-origin: bottom;
+}
+.lid-img {
+  position: absolute;
+  width: 35%;
+  height: 35%;
+  top: 40%;
+  left: 25%;
+  opacity: 0;
+  transform-origin: right;
+}
+.label {
+  position: absolute;
+  font-size: 13px;
+  font-weight: bold;
+  opacity: 0;
+}
+.label-up {
+  top: 0;
+  right: 0;
+}
+.label-left {
+  color: red;
+  writing-mode: sideways-lr;
+  bottom: 25px;
+  left: 0;
+}
+.image-wrapper:hover .tableware-active-img {
+  opacity: 1;
+}
+.image-wrapper:hover .label-up {
+  opacity: 1;
+}
+.image-wrapper:hover .pot-img {
+  opacity: 1;
+  animation: zoom 2s infinite;
+}
+.image-wrapper:active .label-left {
+  opacity: 1;
+}
+.image-wrapper:active .label-up {
+  opacity: 0;
+}
+.image-wrapper:active .pot-img {
+  opacity: 1;
+  animation: none;
+}
+.image-wrapper:active .lid-img {
+  opacity: 1;
+  animation: clap 1s infinite alternate;
+}
+.container:active {
+  animation: shake 0.5s infinite alternate;
+}
+
+@keyframes zoom {
+  0% { transform: scale(1.0); opacity: 0.3;}
+  50% { transform: scale(1.1); opacity: 1.0;}
+  100% {transform: scale(1.0); opacity: 0.3;}
+}
+@keyframes clap {
+  0% { transform: rotate(-40deg) translateX(-6px) translateY(-10px);}
+  100% { transform: rotate(0deg);}
+}
+@keyframes shake {
+  0% { transform: translateX(0);}
+  25% { transform: translateX(-1px);}
+  50% { transform: translateX(1px);}
+  75% { transform: translateX(-1px);}
+  100% { transform: translateX(0);}
+}

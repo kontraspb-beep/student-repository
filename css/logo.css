@@ -1,0 +1,112 @@
+.logo div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+.pan {
+    width: 80%;
+    height: 80%;
+    background: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: 5px black;
+    border-radius: 100%;
+}
+.panhandle {
+    width: 16px;
+    height: 60px;
+    background: black;
+    border-radius: 50% 50% 0 0 / 10px 10px 0 0;
+    transform: rotate(59deg);
+    position: absolute;
+    right: -28%;
+    top: -28%;
+}
+.panhandle::after,
+.panhandle::before {
+    content: '';
+    background: rgb(250, 225, 190);
+    position: absolute;
+    width: 8px;
+    height: 45px;
+    border-radius: 0 100% 100% 0 / 0 35px 10px 0;
+    top: 10px;
+    left: -4px;
+}
+.panhandle::before {
+    transform: scaleX(-1);
+    left: auto;
+    right: -4px;
+}
+.hole {
+    width: 4px;
+    height: 8px;
+    position: absolute;
+    background: rgb(250, 225, 190);
+    border-radius: 100% / 5px 5px 15px 15px;
+    left: 6px;
+    top: 6px;
+}
+.bottom {
+    width: 86%;
+    height: 86%;
+    position: absolute;
+    border-radius: 100%;
+    border-left: 2px solid rgb(173, 169, 169);
+    border-right: 1px solid rgb(126, 123, 123);
+    border-bottom: 1px solid black;
+    top: 7%;
+    left: 7%;
+    transform: rotate(45deg);
+}
+.egg {
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    top: 45%;
+    left: 25%;
+}
+.white {
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: absolute;
+    border-radius: 70% 40% 100% 50%;
+}
+.yolk {
+    width: 50%;
+    height: 50%;
+    background: rgb(253, 199, 20);
+    position: absolute;
+    border-radius: 100%;
+    border-left: 3px solid orange;
+    border-top: 1px solid orange;
+    border-right: 1px solid orange;
+    border-bottom: 2px solid orange;
+    top: 15%;
+    left: 15%;
+}
+.glare {
+    width: 30%;
+    height: 30%;
+    background: rgb(250, 250, 203);
+    position: absolute;
+    border-radius: 100% 20% 100% 20%;
+}
+.glare-left {
+    top: 5%;
+    left: 5%;
+}
+.glare-right {
+    transform: rotate(180deg);
+    width: 15%;
+    height: 15%;
+    bottom: 10%;
+    right: 10%;
+}
