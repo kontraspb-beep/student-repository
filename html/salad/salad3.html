@@ -6,7 +6,6 @@
   <title>Вторая страница</title>
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet" href="../../css/logo.css">
-  <script src="../../JS/main.js"></script>
 </head>
 <body>
   <header class="header">
@@ -59,10 +58,20 @@
         <ol id="recipe"></ol>
       </div>
   </main>
+  <footer class="footer">
+    <a href="../../html/task2.html">Задание №2</a>
+    <a href="../../html/task3.html">Задание №3</a>
+    <a href="../../html/task4.html">Задание №4</a>
+    <a href="../../html/task5.html">Задание №5</a>
+    <a href="../../html/coursework.html">Курсовая работа</a>
+  </footer>
+
+  <script src="../../JS/main.js"></script>
 
   <script>
     let num = 3;
 
+    document.querySelector('title').textContent = arrayOfSaladNames[num - 1]
     document.querySelector('h2').textContent = arrayOfSaladNames[num - 1]
     document.querySelector('.dish img').src = '../' + arrayOfSaladImgs[num - 1]
     document.querySelector('.description').textContent = arrayOfSaladDescriptions[num - 1]
@@ -79,7 +88,5 @@
       olRecipe.appendChild(newLi)
     }
   </script>
-
-  <footer class="footer">Нижняя часть</footer>
 </body>
 </html>

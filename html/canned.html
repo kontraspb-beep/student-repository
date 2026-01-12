@@ -6,7 +6,6 @@
   <title>Заготовки</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/logo.css">
-  <script src="../JS/main.js"></script>
 </head>
 <body>
   <header class="header">
@@ -57,34 +56,37 @@
           <p>Lorem ipsum dolor sit amet.</p>
         </div>
       </a>
-      <a href="canned/canned2.html">
-        <div class="dish">
-          <img class="photo" id="soup" src="#" alt="">
-          <h3>Название</h3>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </div>
-      </a>
-      <a href="canned/canned3.html">
-        <div class="dish">
-          <img class="photo" id="soup" src="#" alt="">
-          <h3>Название</h3>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </div>
-      </a>
     </div>
   </main>
+  <footer class="footer">
+    <a href="../html/task2.html">Задание №2</a>
+    <a href="../html/task3.html">Задание №3</a>
+    <a href="../html/task4.html">Задание №4</a>
+    <a href="../html/task5.html">Задание №5</a>
+    <a href="../html/coursework.html">Курсовая работа</a>
+  </footer>
+
+  <script src="../JS/main.js"></script>
+
   <script>
-    let arrayImgs = document.querySelectorAll('.dish img')
-    let arrayNames = document.querySelectorAll('.dish h3')
-    let arrayDescriptions = document.querySelectorAll('.dish p')
+    let content = document.querySelector('.content');
+    let dish = document.querySelector('.content a');
+    for (let i = 1; i < arrayOfCannedNames.length; i++) {
+      let newDish = dish.cloneNode(true);
+      content.appendChild(newDish);
+    }
+
+    let arrayImgs = document.querySelectorAll('.dish img');
+    let arrayNames = document.querySelectorAll('.dish h3');
+    let arrayDescriptions = document.querySelectorAll('.dish p');
+    let arrayReferences = document.querySelectorAll('.content a');
 
     for (let i = 0; i < arrayImgs.length; i++) {
-      arrayImgs[i].src = arrayOfCannedImgs[i]
-      arrayNames[i].textContent = arrayOfCannedNames[i]
-      arrayDescriptions[i].textContent = arrayOfCannedDescriptions[i]
+      arrayImgs[i].src = arrayOfCannedImgs[i];
+      arrayNames[i].textContent = arrayOfCannedNames[i];
+      arrayDescriptions[i].textContent = arrayOfCannedDescriptions[i];
+      arrayReferences[i].href = '../' + arrayOfCannedReferences[i];
     }
   </script>
-  <footer class="footer">Нижняя часть</footer>
 </body>
-
 </html>

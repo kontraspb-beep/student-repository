@@ -362,3 +362,15 @@ arrayOfCannedDescriptions.push('Икра из запеченных яблок и
 arrayOfCannedIngredients.push(['баклажаны 2.5 кг.', 'перец болгарский красный 2 кг.', 'яблоки 0.6 кг.', 'перец острый 1 шт.', 'чеснок 55 г.', 'кинза свежая 1 пучок', 'растительное масло 160 г.', 'сахар 80 г.', 'соль 30 г.', 'яблочный уксус 1 ст. л.'])
 arrayOfCannedRecipe.push(['Запекаем в духовке 2 кг красного болгарского перца при температуре 200°C примерно 30 минут. Я переворачивала перец, чтобы он запекся с двух сторон. Выбирайте красные мясистые плоды — от этого будет зависеть вкус и цвет икры.', '2,5 кг баклажанов запекаем 35 минут в духовке при температуре 200°C. Также переворачиваем овощи, чтобы они запеклись с двух сторон.', 'Яблоки очищаем от семян и кожуры. Запекаем при температуре 200°C в течение 15 минут.', 'Запеченные перцы и баклажаны очищаем от кожуры, из перцев удаляем семена.', 'Перекручиваем через мясорубку запеченные перцы, баклажаны, яблоки и один острый перец.', 'Добавляем растительное масло.','Добавляем сахар и соль. Тушим овощи примерно 30 минут. По своему вкусу регулируем соль и сахар.', 'В конце тушения добавляем большой пучок нарезанной свежей кинзы, чеснок и столовую ложку яблочного уксуса. Варим все вместе 5 минут.', 'Раскладываем икру по стерилизованным банкам, закрываем крышками. Приятного аппетита!'])
 arrayOfCannedReferences.push('html/canned/canned3.html')
+
+let imagesOfDishes = [arrayOfSoupImgs, arrayOfHotImgs, arrayOfSaladImgs, arrayOfSnackImgs, arrayOfBakeryImgs, arrayOfDessertImgs, arrayOfSauceImgs, arrayOfCannedImgs];
+
+let namesOfDishes = [arrayOfSoupNames, arrayOfHotNames, arrayOfSaladNames, arrayOfSnackNames, arrayOfBakeryNames, arrayOfDessertNames, arrayOfSauceNames, arrayOfCannedNames];
+
+let descriptionsOfDishes = [arrayOfSoupDescriptions, arrayOfHotDescriptions, arrayOfSaladDescriptions, arrayOfSnackDescriptions, arrayOfBakeryDescriptions, arrayOfDessertDescriptions, arrayOfSauceDescriptions, arrayOfCannedDescriptions];
+
+let ingredientsOfDishes = [arrayOfSoupIngredients, arrayOfHotIngredients, arrayOfSaladIngredients, arrayOfSnackIngredients, arrayOfBakeryIngredients, arrayOfDessertIngredients, arrayOfSauceIngredients, arrayOfCannedIngredients];
+
+let recipeOfDishes = [arrayOfSoupRecipe, arrayOfHotRecipe, arrayOfSaladRecipe, arrayOfSnackRecipe, arrayOfBakeryRecipe, arrayOfDessertRecipe, arrayOfSauceRecipe, arrayOfCannedRecipe];
+
+let referencesOfDishes = [arrayOfSoupReferences, arrayOfHotReferences, arrayOfSaladReferences, arrayOfSnackReferences, arrayOfBakeryReferences, arrayOfDessertReferences, arrayOfSauceReferences, arrayOfCannedReferences];
