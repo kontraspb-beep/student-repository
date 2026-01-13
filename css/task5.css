@@ -1,0 +1,27 @@
+main {
+  margin: 0;
+  display: flex;
+}
+.tiger {
+  position: absolute;
+  cursor: grab;
+}
+  /* Позиции изображений */
+#img4, #img6, #img7 {
+  z-index: 0;
+}
+#img1 {
+  z-index: 1;
+}
+#img2, #img3, #img5 {
+  z-index: 2;
+}
+
+  /* Конфетти */
+canvas {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 0%;
+  margin: 0;
+  z-index: 3;
+}
