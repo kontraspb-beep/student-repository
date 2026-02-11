@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Игра "Порядок чисел"</title>
+  <link rel="stylesheet" href="../css/minigame.css">
+</head>
+<body>
+  <h2 id="task">Задание</h2>
+  <div id="time-score">
+    <div id="timer">Время: <span id="time">00:00</span></div>
+      <div id="control-buttons">
+        <button id="endLevelBtn">Закончить уровень</button>
+        <button id="endGameBtn">Закончить игру</button>  
+      </div>
+    <div id="score"></div>
+  </div>
+  <div id="game-area"></div>
+  <div id="result">Вывод результата: <span id="sequence"></span></div>
+
+  <audio id="successSound" src="../sounds/success.mp3" preload="auto"></audio>
+  <audio id="errorSound" src="../sounds/error.mp3" preload="auto"></audio>
+
+  <script src="../JS/minigame.js"></script>
+  <script src="../JS/animation.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вход в игру</title>
+  <link rel="stylesheet" href="../css/minigame.css">
+</head>
+<body>
+  <h1 id="gameName">Игра порядок чисел</h1>
+  <h2>Введите ваше имя</h2>
+  <input type="text" id="username" placeholder="Ваше имя" />
+  <h3>Выберите уровень сложности</h3>
+  <div id="difficulties">
+    <label><input type="radio" name="difficulty" value="1" checked /> Легкий</label>
+    <label><input type="radio" name="difficulty" value="2" /> Обычный</label>
+    <label><input type="radio" name="difficulty" value="3" /> Трудный</label>
+  </div>
+
+  <label>
+    <input type="checkbox" id="showControls" /> Добавить кнопки завершения
+  </label>
+  <button id="startGameBtn">Начать игру</button>
+  <button id="homePageBtn" onclick="window.location.href='rating.html'">Рейтинг</button>
+  <button id="homePageBtn" onclick="window.location.href='../index.html'">На главную</button>
+
+
+  <script>
+    document.getElementById('startGameBtn').onclick = () => {
+      const username = document.getElementById('username').value.trim();
+      const showControls = document.getElementById('showControls').checked;
+      // Получаем выбранный уровень сложности
+      const difficultyRadios = document.querySelectorAll('input[name="difficulty"]');
+      let difficultyLevel = 1; // по умолчанию
+      for (const radio of difficultyRadios) {
+        if (radio.checked) {
+          difficultyLevel = parseInt(radio.value);
+          break;
+        }
+      }
+      if (username) {
+        localStorage.setItem('playerName', username);
+        localStorage.setItem('showControls', showControls);
+        localStorage.setItem('difficultyLevel', difficultyLevel);
+        window.location.href = 'minigame.html';
+      } else {
+        alert('Пожалуйста, введите имя');
+      }
+    };
+  </script>
+</body>
+</html>

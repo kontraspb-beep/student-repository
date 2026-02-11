@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рейтинг игроков</title>
+  <link rel="stylesheet" href="../css/minigame.css">
+</head>
+<body>
+  <h2>10 лучших результатов</h2>
+  <div id="ratingList"></div>
+  <button id="newGameBtn" onclick="window.location.href='minigame.html'">Играть снова</button>
+  <button id="newGameBtn" onclick="window.location.href='coursework.html'">Изменить имя</button>
+  <button id="homePageBtn" onclick="window.location.href='../index.html'">На главную</button>
+
+  <script>
+    const ratingDiv = document.getElementById('ratingList');
+    let ratings = JSON.parse(localStorage.getItem('ratings')) || [];
+    ratings.sort((a, b) => b.score - a.score);
+
+    for (let i = 0; i < 10; i++) {
+      const div = document.createElement('div');
+      let player = ratings[i]
+      div.textContent = `${player.name}: ${player.score} очков`;
+      ratingDiv.appendChild(div);
+    }
+  </script>
+</body>
+</html>
