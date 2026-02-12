@@ -861,6 +861,11 @@ function startGame(level) {
 
 // Обработчики кнопок
 document.getElementById('endLevelBtn').onclick = () => {
+  // Удаление старого элемента если он существует
+  const element = document.querySelector('.overlay');
+  if (element) {
+    element.remove();
+  }
   // Завершение текущего уровня
   endGame(1);
 };
@@ -879,3 +884,4 @@ showLevelIntro(currentLevel);
 // initLevel1();
 // initLevel2();
 // initLevel3();
+
