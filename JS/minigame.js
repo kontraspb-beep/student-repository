@@ -860,7 +860,7 @@ function startGame(level) {
 
 
 // Обработчики кнопок
-document.getElementById('endLevelBtn').onclick = () => {
+document.querySelector('#endLevelBtn').onclick = () => {
   // Удаление старого элемента если он существует
   const element = document.querySelector('.overlay');
   if (element) {
@@ -870,7 +870,7 @@ document.getElementById('endLevelBtn').onclick = () => {
   endGame(1);
 };
 
-document.getElementById('endGameBtn').onclick = () => {
+document.querySelector('#endGameBtn').onclick = () => {
   // Завершение игры
   endGame(0);
 };
@@ -884,4 +884,3 @@ showLevelIntro(currentLevel);
 // initLevel1();
 // initLevel2();
 // initLevel3();
-
